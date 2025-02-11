@@ -1,5 +1,44 @@
 {% render 'partials/head.liquid', title: 'Squad page' %}
 
+<section class="section1">
+
+  <object class="arrow left">
+  </object>
+  <div>
+    {% comment %} hier moeten alle plaatsjes komen maar zijn gesorteerd op geboortejaar {% endcomment %}
+  </div>
+  <object class="arrow right">
+  </object>
+
+</section>
+<section class="section2">
+  <object class="arrow left">
+    </object>
+
+    {% comment %} hier komt een interactie dat het jaartal wordt opgeteld wanneer je de pagina laadt {% endcomment %}
+  <p>YYYY</p>
+
+  <object class="arrow right">
+    </object>
+</section>
+
+{% comment %} all popups {% endcomment %}
+<article class="student-article 1">
+  <img src="assets/photo-1" width="100px">
+  <p> {{ person.name }} </p>
+  <p> {{ person.squad }} </p>
+  <p> {{ person.birthdate yyyy }} </p>
+</article>
+
+<article class="student-article 2">
+  <img src="assets/photo-2" width="100px">
+  <p> {{ person.name }} </p>
+  <p> {{ person.squad }} </p>
+  <p> {{ person.birthdate yyyy }} </p>
+</article>
+
+etc. etc.
+
 <h2>Students</h2>
 <ul>
   {% for person in persons %}
