@@ -5,6 +5,59 @@
   <object class="arrow left">
   </object>
   <div>
+    <img src="/assets/id-25.JPG" width="100px">
+    <img src="/assets/id-59.JPG" width="100px">
+    <img src="/assets/id-65.JPG" width="100px">
+    <img src="/assets/id-67.JPG" width="100px">
+    <img src="/assets/id-70.JPG" width="100px">
+    <img src="/assets/id-80.JPG" width="100px">
+    <img src="/assets/id-144.JPG" width="100px">
+    <img src="/assets/id-145.JPG" width="100px">
+    <img src="/assets/id-146.JPG" width="100px">
+    <img src="/assets/id-147.JPG" width="100px">
+    <img src="/assets/id-148.JPG" width="100px">
+    <img src="/assets/id-149.JPG" width="100px">
+    <img src="/assets/id-150.JPG" width="100px">
+    <img src="/assets/id-151.JPG" width="100px">
+    <img src="/assets/id-152.JPG" width="100px">
+    <img src="/assets/id-154.JPG" width="100px">
+    <img src="/assets/id-155.JPG" width="100px">
+    <img src="/assets/id-156.JPG" width="100px">
+    <img src="/assets/id-157.JPG" width="100px">
+    <img src="/assets/id-158.JPG" width="100px">
+    <img src="/assets/id-159.JPG" width="100px">
+    <img src="/assets/id-160.JPG" width="100px">
+    <img src="/assets/id-161.JPG" width="100px">
+    <img src="/assets/id-162.JPG" width="100px">
+    <img src="/assets/id-163.JPG" width="100px">
+    <img src="/assets/id-164.JPG" width="100px">
+    <img src="/assets/id-165.JPG" width="100px">
+    <img src="/assets/id-166.JPG" width="100px">
+    <img src="/assets/id-167.JPG" width="100px">
+    <img src="/assets/id-168.JPG" width="100px">
+    <img src="/assets/id-169.JPG" width="100px">
+    <img src="/assets/id-170.JPG" width="100px">
+    <img src="/assets/id-171.JPG" width="100px">
+    <img src="/assets/id-172.JPG" width="100px">
+    <img src="/assets/id-173.JPG" width="100px">
+    <img src="/assets/id-174.JPG" width="100px">
+    <img src="/assets/id-175.JPG" width="100px">
+    <img src="/assets/id-176.JPG" width="100px">
+    <img src="/assets/id-177.JPG" width="100px">
+    <img src="/assets/id-178.JPG" width="100px">
+    <img src="/assets/id-179.JPG" width="100px">
+    <img src="/assets/id-180.JPG" width="100px">
+    <img src="/assets/id-181.JPG" width="100px">
+    <img src="/assets/id-182.JPG" width="100px">
+    <img src="/assets/id-183.JPG" width="100px">
+    <img src="/assets/id-184.JPG" width="100px">
+    <img src="/assets/id-185.JPG" width="100px">
+    <img src="/assets/id-186.JPG" width="100px">
+    <img src="/assets/id-187.JPG" width="100px">
+    <img src="/assets/id-188.JPG" width="100px">
+    <img src="/assets/id-189.JPG" width="100px">
+    <img src="/assets/id-190.JPG" width="100px">
+    <img src="/assets/id-192.JPG" width="100px">
     {% comment %} hier moeten alle plaatsjes komen maar zijn gesorteerd op geboortejaar {% endcomment %}
   </div>
   <object class="arrow right">
@@ -14,36 +67,26 @@
 <section class="section2">
   <object class="arrow left">
     </object>
-
     {% comment %} hier komt een interactie dat het jaartal wordt opgeteld wanneer je de pagina laadt {% endcomment %}
-  <p>YYYY</p>
-
+    {% for person in persons %}
+      <p> {{ person.birthdate | date: "%Y" }}  </p>
+    {% endfor %}
   <object class="arrow right">
     </object>
 </section>
 
-{% comment %} all popups {% endcomment %}
-<article class="student-article 1">
-  <img src="assets/photo-1" width="100px">
-  <p> {{ person.name }} </p>
-  <p> {{ person.squad }} </p>
-  <p> {{ person.birthdate yyyy }} </p>
-</article>
-
-<article class="student-article 2">
-  <img src="assets/photo-2" width="100px">
-  <p> {{ person.name }} </p>
-  <p> {{ person.squad }} </p>
-  <p> {{ person.birthdate yyyy }} </p>
-</article>
-
-etc. etc.
-
 <h2>Students</h2>
+
 <ul>
   {% for person in persons %}
+    <article>
     <li><a href="/student/{{ person.id }}">{{ person.name }}</a></li>
+    <li><a href="/student/{{ person.birthdate}}">{{ person.birthdate | date: "%Y" }}</a></li>
+
+    <p> {{ person.squads.0.squad_id.name }} </p>
+    </article>
   {% endfor %}
+  
 </ul>
 
 {% render 'partials/foot.liquid', squads: squads %}
