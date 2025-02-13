@@ -53,7 +53,6 @@ section:nth-of-type(2) {
     position: relative;
     left: 37.8%;
     z-index: 2;
-    border: 1px solid #0d0d0d;
     display: flex;
     gap: 30px;
 }
