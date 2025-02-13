@@ -5,10 +5,10 @@
   <object class="arrow left">
   </object>
   <div>
-    <img src="/assets/id-25.JPG" width="100px">
-    <img src="/assets/id-59.JPG" width="100px">
-    <img src="/assets/id-65.JPG" width="100px">
-    <img src="/assets/id-67.JPG" width="100px">
+    <img src="/assets/id-25.JPG" width="100px" class="y1994">
+    <img src="/assets/id-59.JPG" width="100px" class="y2003">
+    <img src="/assets/id-65.JPG" width="100px" class="y1973">
+    <img src="/assets/id-67.JPG" width="100px" class="y1984">
     <img src="/assets/id-70.JPG" width="100px">
     <img src="/assets/id-80.JPG" width="100px">
     <img src="/assets/id-144.JPG" width="100px">
@@ -86,7 +86,11 @@
     <p> {{ person.squads.0.squad_id.name }} </p>
     </article>
   {% endfor %}
-  
 </ul>
+
+<h2> 2000 </h2>
+{% for person in twoThousands %}
+  <li>{{ person.name }}</li>
+{% endfor %}
 
 {% render 'partials/foot.liquid', squads: squads %}

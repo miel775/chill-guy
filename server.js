@@ -48,31 +48,25 @@ app.get('/', async function (request, response) {
   // Haal alle personen uit de WHOIS API op, van dit jaar
   const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}}]}')
 
+  // hier zijn alle mensen die in 2000 geboren zijn
+  const twoThousandResponse = await fetch('https://fdnd.directus.app/items/person/?filter={"birthdate":{"_between":["2000-01-01","2000-12-31"]}}')
+
   // En haal daarvan de JSON op
   const personResponseJSON = await personResponse.json()
+
+  const twoThousandResponseJSON = await twoThousandResponse.json()
   
   // personResponseJSON bevat gegevens van alle personen uit alle squads van dit jaar
   // Je zou dat hier kunnen filteren, sorteren, of zelfs aanpassen, voordat je het doorgeeft aan de view
 
   // Render index.liquid uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
   // Geef ook de eerder opgehaalde squad data mee aan de view
-  response.render('index.liquid', {persons: personResponseJSON.data, squads: squadResponseJSON.data})
+  response.render('index.liquid', {
+    persons: personResponseJSON.data, 
+    squads: squadResponseJSON.data,
+    twoThousands: twoThousandResponseJSON.data})
 })
 
-app.get('/', async function (request, response) {
-  // allle
-  const personyearResponse = await fetch('https://fdnd.directus.app/items/person/?filter[year(birthdate)][_eq]=2000')
-
-  // En haal daarvan de JSON op
-  const personyearResponseJSON = await personyearResponse.json()
-  
-  // personResponseJSON bevat gegevens van alle personen uit alle squads van dit jaar
-  // Je zou dat hier kunnen filteren, sorteren, of zelfs aanpassen, voordat je het doorgeeft aan de view
-
-  // Render index.liquid uit de views map en geef de opgehaalde data mee als variabele, genaamd persons
-  // Geef ook de eerder opgehaalde squad data mee aan de view
-  response.render('index.liquid', {persons: personyearResponseJSON.data})
-})
 
 // Maak een POST route voor de index; hiermee kun je bijvoorbeeld formulieren afvangen
 app.post('/', async function (request, response) {
