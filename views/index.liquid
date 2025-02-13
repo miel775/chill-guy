@@ -2,8 +2,10 @@
 
 <section class="section1">
 
-  <object class="arrow left">
-  </object>
+  <div class="arrow left">
+    <img src="/assets/arrow-left.svg" width="50px">
+  </div>
+
   <div class="mugshots">
     <img src="/assets/id-25.JPG" width="100px" class="y1994 1">
     <img src="/assets/id-59.JPG" width="100px" class="y2005 1">
@@ -49,19 +51,35 @@
     <img src="/assets/id-192.JPG" width="100px" class="y1990 1">
     {% comment %} hier moeten alle plaatsjes komen maar zijn gesorteerd op geboortejaar {% endcomment %}
   </div>
-  <object class="arrow right">
+  <div class="arrow right">
+    <img src="/assets/arrow-right.svg" width="50px">
+  </div>
   </object>
 
 </section>
 <section class="section2">
-  <object class="arrow left">
-    </object>
-    {% comment %} hier komt een interactie dat het jaartal wordt opgeteld wanneer je de pagina laadt {% endcomment %}
-    {% for person in persons %}
-      <p> {{ person.birthdate | date: "%Y" }}  </p>
-    {% endfor %}
-  <object class="arrow right">
-    </object>
+  <div class="arrow left">
+    <img src="/assets/arrow-left.svg" width="50px">
+  </div>
+
+  <p>1971</p>
+  <p>1973</p>
+  <p>1984</p>
+  <p>1990</p>
+  <p>1994</p>
+  <p>1999</p>
+  <p>2000</p>
+  <p>2001</p>
+  <p>2002</p>
+  <p>2003</p>
+  <p>2004</p>
+  <p>2005</p>
+  <p>2006</p>
+  <p>2007</p>
+  
+  <div class="arrow right">
+      <img src="/assets/arrow-right.svg" width="50px">
+    </div>
 </section>
 
 <h2>Students</h2>
