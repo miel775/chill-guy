@@ -1,17 +1,17 @@
 body {
     background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/48f579b9-0d56-481a-a9b4-d61ef9364197/dcm4v1f-fb64b6d1-30d8-454e-8208-f0c384eb00c1.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ4ZjU3OWI5LTBkNTYtNDgxYS1hOWI0LWQ2MWVmOTM2NDE5N1wvZGNtNHYxZi1mYjY0YjZkMS0zMGQ4LTQ1NGUtODIwOC1mMGMzODRlYjAwYzEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.xeq_vf94gHh9Rgken6iI_6hxbS5tR9for0HVJtX9qvA);
     object-fit: cover;
-    font-family: Poppins;
+    font-family: Ropa Sans;
 }
 
 section:nth-of-type(1) {
     background-color: rgb(170, 166, 166);
     position: absolute;
     z-index: -1;
-    top: -45.8%;
-    left: -50%;
-    width: 200em;
-    height: 37.4em;
+    top: -41.6%;
+    left: -1%;
+    width: 100em;
+    height: 35em;
 }
 
 section:nth-of-type(2) {
@@ -21,26 +21,74 @@ section:nth-of-type(2) {
     left: -50%;
     width: 190em;
     height: 37.4em;
+
+    .arrow-left {
+        position: relative;
+        left: 34.6%;
+        z-index: 4;
+        top: 12.6%;
+    }
+
+    .arrow-right {
+        position: relative;
+        left: 42.7%;
+        z-index: 4;
+        top: -12.0%;
+    }
 }
 
 .mugshots {
+    display: flex;
+    gap: 1.2em;
     position: absolute;
-    top: 60%;
-
+    top: 64.4%;
+    left: 1.8%;
     img {
-        width: 0.1em;
-        scale: 10;
+        width: 7em;
     }
 }
 
 .years {
-    font-size: 212px;
+    font-size: 84px;
     position: relative;
+    left: 37.8%;
     z-index: 2;
+    border: 1px solid #0d0d0d;
+    display: flex;
+    gap: 30px;
 }
 
-.poppins-regular {
-    font-family: "Poppins", serif;
+.ropa-sans-regular {
+    font-family: "Ropa Sans", serif;
     font-weight: 400;
     font-style: normal;
+}
+
+.magnifyer {
+    display: block;
+    width: 159.4px;
+    height: 82px;
+    border: 7px solid #0d0d0d;
+    position: absolute;
+    left: 37%;
+}
+
+.years {
+    animation: totheleft 1s ease-in;
+
+}
+
+@keyframes totheleft {
+    0% {
+        transform: translateX(0) ;
+    }
+
+    100% {
+        transform: translateX(-10em) ;
+    }
+}
+
+
+.y2006 {
+    display: none;
 }

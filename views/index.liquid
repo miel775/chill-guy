@@ -2,12 +2,18 @@
 
 <section class="section1">
 
-  <div class="arrow left">
+  <div class="arrow-left">
     <img src="/assets/arrow-left.svg" width="50px">
   </div>
 
   <div class="mugshots">
-    <img src="/assets/id-25.JPG" width="100px" class="y1994 1">
+  {% for person in persons %}
+    <article>
+    <li> <a></a> href="/student/{{ person.id }}"<img src="{{ person.avatar }}"> </a></li>
+    </article>
+  {% endfor %}
+
+    {% comment %} <img src="/assets/id-25.JPG" width="100px" class="y1994 1">
     <img src="/assets/id-59.JPG" width="100px" class="y2005 1">
     <img src="/assets/id-65.JPG" width="100px" class="y1973 1">
     <img src="/assets/id-67.JPG" width="100px" class="y1984 1">
@@ -48,18 +54,22 @@
     <img src="/assets/id-187.JPG" width="100px" class="y2004 5">
     <img src="/assets/id-188.JPG" width="100px" class="y2000 4">
     <img src="/assets/id-190.JPG" width="100px" class="y2004 6">
-    <img src="/assets/id-192.JPG" width="100px" class="y1990 1">
+    <img src="/assets/id-192.JPG" width="100px" class="y1990 1"> {% endcomment %}
     {% comment %} hier moeten alle plaatsjes komen maar zijn gesorteerd op geboortejaar {% endcomment %}
   </div>
-  <div class="arrow right">
+  <div class="arrow-right">
     <img src="/assets/arrow-right.svg" width="50px">
   </div>
   </object>
 
 </section>
 <section class="section2">
-  <div class="arrow left">
+  <div class="arrow-left">
     <img src="/assets/arrow-left.svg" width="50px">
+  </div>
+
+  <div class="magnifyer">
+
   </div>
 
   <div class="years">
@@ -69,7 +79,7 @@
     <a>1990</a>
     <a>1994</a>
     <a>1999</a>
-    <a>2000</a>
+    <a class="bttn2000">2000</a>
     <a>2001</a>
     <a>2002</a>
     <a>2003</a>
@@ -79,7 +89,7 @@
     <a>2007</a>
   </div>
   
-  <div class="arrow right">
+  <div class="arrow-right">
       <img src="/assets/arrow-right.svg" width="50px">
     </div>
 </section>
@@ -196,6 +206,7 @@
 {% for person in twoThousandSeven %}
   <li>{{ person.name }}</li>
 {% endfor %}
-{% endcomment %}
+
 
 {% render 'partials/foot.liquid', squads: squads %}
+{% endcomment %}
