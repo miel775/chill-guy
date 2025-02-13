@@ -1,9 +1,7 @@
 body {
     background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/48f579b9-0d56-481a-a9b4-d61ef9364197/dcm4v1f-fb64b6d1-30d8-454e-8208-f0c384eb00c1.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQ4ZjU3OWI5LTBkNTYtNDgxYS1hOWI0LWQ2MWVmOTM2NDE5N1wvZGNtNHYxZi1mYjY0YjZkMS0zMGQ4LTQ1NGUtODIwOC1mMGMzODRlYjAwYzEucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.xeq_vf94gHh9Rgken6iI_6hxbS5tR9for0HVJtX9qvA);
     object-fit: cover;
-    overflow: hidden;
     font-family: Poppins;
-
 }
 
 section:nth-of-type(1) {
@@ -12,7 +10,7 @@ section:nth-of-type(1) {
     z-index: -1;
     top: -45.8%;
     left: -50%;
-    width: 120em;
+    width: 200em;
     height: 37.4em;
 }
 
@@ -20,28 +18,29 @@ section:nth-of-type(2) {
     background-color: rgb(170, 166, 166);
     position: absolute;
     top: 60%;
-    width: 120em;
+    left: -50%;
+    width: 190em;
     height: 37.4em;
-    display: flex;
-    place-items: center;
-    &p {
-        
-    }
 }
 
 .mugshots {
-    display: flex;
+    position: absolute;
+    top: 60%;
+
+    img {
+        width: 0.1em;
+        scale: 10;
+    }
 }
 
-.mugshots img {
+.years {
+    font-size: 212px;
     position: relative;
-    top: 250%;
-    gap: 10px;
+    z-index: 2;
 }
-
 
 .poppins-regular {
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
-  }
+}
