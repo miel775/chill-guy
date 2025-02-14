@@ -40,22 +40,32 @@ section:nth-of-type(2) {
 .mugshots {
     display: flex;
     gap: 1.2em;
-    position: absolute;
+    position: fixed;
     top: 64.4%;
     left: 1.8%;
     img {
         width: 7em;
+    }
+
+    img:hover {
+        animation: scaling 0.3s forwards;
+        border: 1px solid #0d0d0d;
+    }
+
+    img:hover img {
+        display: none;
     }
 }
 
 .years {
     font-size: 84px;
     position: relative;
-    left: 37.8%;
+    left: 45%;
     z-index: 2;
     display: flex;
     gap: 30px;
 }
+
 
 .ropa-sans-regular {
     font-family: "Ropa Sans", serif;
@@ -72,9 +82,12 @@ section:nth-of-type(2) {
     left: 37%;
 }
 
-.years {
-    animation: totheleft 1s ease-in;
+.years.right {
+    animation: totheright 1s forwards;
+}
 
+.years.left {
+    animation: totheleft 1s backwards;
 }
 
 @keyframes totheleft {
@@ -83,7 +96,28 @@ section:nth-of-type(2) {
     }
 
     100% {
-        transform: translateX(-10em) ;
+        transform: translateX(3em) ;
+    }
+}
+
+
+@keyframes totheright {
+    0% {
+        transform: translateX(0) ;
+    }
+
+    100% {
+        transform: translateX(-3em) ;
+    }
+}
+
+@keyframes scaling {
+    0% {
+        scale: 1;
+    }
+
+    100% {
+        scale: 1.4;
     }
 }
 

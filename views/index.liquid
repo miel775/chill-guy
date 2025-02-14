@@ -2,17 +2,10 @@
 
 <section class="section1">
 
-  <div class="arrow-left">
-    <img src="/assets/arrow-left.svg" width="50px">
-  </div>
-
+<div id="drag">
   <div class="mugshots">
-  {% for person in persons %}
-    <article>
-    <li> <a></a> href="/student/{{ person.id }}"<img src="{{ person.avatar }}"> </a></li>
-    </article>
-  {% endfor %}
-    <img src="/assets/id-{{ person.id.25 }}.JPG" width="100px" class="y1994 1">
+    {% comment %} Deze person id werkt niet, hoe krijg ik hier de id (25)? {% endcomment %}
+    <img src="/assets/id-25.JPG" width="100px" class="y1994 1">
     <img src="/assets/id-59.JPG" width="100px" class="y2005 1">
     <img src="/assets/id-65.JPG" width="100px" class="y1973 1">
     <img src="/assets/id-67.JPG" width="100px" class="y1984 1">
@@ -53,45 +46,42 @@
     <img src="/assets/id-187.JPG" width="100px" class="y2004 5">
     <img src="/assets/id-188.JPG" width="100px" class="y2000 4">
     <img src="/assets/id-190.JPG" width="100px" class="y2004 6">
-    <img src="/assets/id-192.JPG" width="100px" class="y1990 1"> {% endcomment %}
-    {% comment %} hier moeten alle plaatsjes komen maar zijn gesorteerd op geboortejaar {% endcomment %}
+    <img src="/assets/id-192.JPG" width="100px" class="y1990 1">
   </div>
-  <div class="arrow-right">
-    <img src="/assets/arrow-right.svg" width="50px">
-  </div>
+</div>
   </object>
 
 </section>
 <section class="section2">
-  <div class="arrow-left">
+  <button class="arrow-left">
     <img src="/assets/arrow-left.svg" width="50px">
-  </div>
+  </button>
 
   <div class="magnifyer">
 
   </div>
 
-  <div class="years">
-    <a class="bttn1971">1971</a>
-    <a>1973</a>
-    <a>1984</a>
-    <a>1990</a>
-    <a>1994</a>
-    <a>1999</a>
-    <a class="bttn2000">2000</a>
-    <a>2001</a>
-    <a>2002</a>
-    <a>2003</a>
-    <a>2004</a>
-    <a>2005</a>
-    <a>2006</a>
-    <a>2007</a>
-  </div>
+    <div class="years">
+      <a class="bttn1971">1971</a>
+      <a>1973</a>
+      <a>1984</a>
+      <a>1990</a>
+      <a>1994</a>
+      <a>1999</a>
+      <a class="bttn2000">2000</a>
+      <a>2001</a>
+      <a>2002</a>
+      <a>2003</a>
+      <a>2004</a>
+      <a>2005</a>
+      <a>2006</a>
+      <a>2007</a>
+    </div>
   
-  <div class="arrow-right">
+  <button class="arrow-right">
       <img src="/assets/arrow-right.svg" width="50px">
     </div>
-</section>
+</button>
 
 <h2>Students</h2>
 
