@@ -40,7 +40,7 @@ section:nth-of-type(2) {
 .mugshots {
     display: flex;
     gap: 1.2em;
-    position: fixed;
+    position: absolute;
     top: 64.4%;
     left: 1.8%;
     img {
@@ -60,12 +60,11 @@ section:nth-of-type(2) {
 .years {
     font-size: 84px;
     position: relative;
-    left: 45%;
+    left: 42.8%;
     z-index: 2;
     display: flex;
     gap: 30px;
 }
-
 
 .ropa-sans-regular {
     font-family: "Ropa Sans", serif;
@@ -96,7 +95,7 @@ section:nth-of-type(2) {
     }
 
     100% {
-        transform: translateX(3em) ;
+        transform: translateX(2em) ;
     }
 }
 
@@ -107,7 +106,7 @@ section:nth-of-type(2) {
     }
 
     100% {
-        transform: translateX(-3em) ;
+        transform: translateX(-2em) ;
     }
 }
 

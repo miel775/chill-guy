@@ -7,6 +7,8 @@ bttnRight.addEventListener('click', (e) => {
     yearsArray.forEach(year => year.classList.add('right'));
 });
 
+
+// hoe klik je telkens verder
 bttnLeft.addEventListener('click', (e) => {
     yearsArray.forEach(year => year.classList.add('left'));
 });
@@ -40,3 +42,5 @@ function mouseMove(e){
 function mouseUp(e){
     document.removeEventListener('mousemove',mouseMove)
 }
+
+// dit werkt niet
