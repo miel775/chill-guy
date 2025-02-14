@@ -80,6 +80,8 @@ app.get('/', async function (request, response) {
   const twoThousandSevenResponseJSON = await twoThousandSevenResponse.json()
   const personResponseJSON = await personResponse.json()
 
+  // hoe kan je dit kleiner maken?
+
   const twoThousandResponseJSON = await twoThousandResponse.json()
   
   // personResponseJSON bevat gegevens van alle personen uit alle squads van dit jaar
