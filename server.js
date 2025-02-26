@@ -140,4 +140,13 @@ app.listen(app.get('port'), function () {
   console.log(`Application started on http://localhost:${app.get('port')}`)
 })
 
+let messages = []
 
+app.get('/berichten', async function (request, response) {
+  response.render('message.liquid', {messages: messages})
+})
+
+app.post('/berichten', async function (request, response) {
+  messages.push(request.body.tekst)
+  response.redirect(303, '/berichten')
+})
